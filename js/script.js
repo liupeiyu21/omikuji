@@ -93,8 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function enlargeResult() {
-        omikuji.style.transform = "transform 0.5s ease-in-out";
-        omikuji.style.transform  = "sclae(2)";
+        omikuji.style.transition = "transform 0.5s ease-in-out";
+        omikuji.style.transform  = "scale(1.5)";
     }
 })
 
