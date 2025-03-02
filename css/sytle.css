@@ -28,6 +28,7 @@ button{
     color: aliceblue;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 button:hover{
     background-color: brown;
@@ -37,5 +38,33 @@ button:hover{
 
 
 
+@media screen and (max-width:1215px) {
+    button{
+        font-size: 28px;
+        width: 30%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:960px) {
+    button{
+        font-size: 25px;
+        width: 30%;
+    }
+}
 
+@media screen and (min-width:429px) and (max-width:959px) {
+    button{
+        font-size: 20px;
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:428px) {
+    button{
+        font-size: 14px;
+        width: 32%;
+    }
+    .hand{
+        width: 50%;
+    }
+}
 

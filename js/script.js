@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
     rightHand.style.bottom = "0";
     rightHand.style.transition = "transform 2s ease-in-out";
     document.body.appendChild(rightHand);
+    
+
+    
 
     button.addEventListener("click", function () {
         //初期位置
@@ -34,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function moveHands() {
-        leftHand.style.transform = "translate(400px, -150px)";
-        rightHand.style.transform = "translate(-400px, -150px)";
+        leftHand.style.transform = "translate(450px, -150px)";
+        rightHand.style.transform = "translate(-450px, -150px)";
 
         setTimeout(() => {
             attachHandsToOmikuji();
@@ -55,18 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         omikuji.style.transform = "translateY(-10px)";
-        leftHand.style.transform = "translate(400px, -140px)";
-        rightHand.style.transform = "translate(-400px, -140px)";
+        leftHand.style.transform = "translate(450px, -140px)";
+        rightHand.style.transform = "translate(-450px, -140px)";
 
         setTimeout(() => {
             omikuji.style.transfrom = "translateY(10px)";
-            leftHand.style.transform = "translate(400px, -160px)";
-            rightHand.style.transform = "translate(-400px, -160px)";
+            leftHand.style.transform = "translate(450px, -160px)";
+            rightHand.style.transform = "translate(-450px, -160px)";
 
             setTimeout(() => {
                 omikuji.style.transform = "translateY(0)";
-                leftHand.style.transform = "translate(400px, -150px)";
-                rightHand.style.transform = "translate(-400px, -150px)";
+                leftHand.style.transform = "translate(450px, -150px)";
+                rightHand.style.transform = "translate(-450px, -150px)";
                 setTimeout(() => moveOmikujiWithHands(count - 1), 300);
             }, 300);
         }, 300);
@@ -74,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function moveLeft()  {
         omikuji.style.transform = "translateX(-20px)";
-        leftHand.style.transform = "translate(380px, -150px)";
-        rightHand.style.transform = "translate(-420px, -150px)";
+        leftHand.style.transform = "translate(430px, -150px)";
+        rightHand.style.transform = "translate(-470px, -150px)";
         setTimeout(() => {
             resetPosition();
         }, 500);
@@ -83,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function resetPosition() {
         omikuji.style.transform = "translate(0, 0)";
-        leftHand.style.transform = "translate(400px, -150px)";
-        rightHand.style.transform = "translate(-400px, -150px)";
+        leftHand.style.transform = "translate(450px, -150px)";
+        rightHand.style.transform = "translate(-450px, -150px)";
         setTimeout(() => {
             const randomResult = results[Math.floor(Math.random() * results.length)];
             omikuji.src = `./picture/${randomResult}`;
@@ -97,4 +100,3 @@ document.addEventListener("DOMContentLoaded", function () {
         omikuji.style.transform  = "scale(1.5)";
     }
 })
-
